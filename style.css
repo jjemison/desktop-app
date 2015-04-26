@@ -1,0 +1,33 @@
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: Circular Std;
+  letter-spacing: 1.5px;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+}
+.text-muted {
+  float: right;
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: #fff;
+  text-align: center;
+}
+.logo h2 {
+  float: left;
+}
+.signin h3 {
+  float: right;
+  padding-left: 20px;
+}
+
