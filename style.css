@@ -1,12 +1,14 @@
 html {
   position: relative;
   min-height: 100%;
-  font-family: Circular Std;
   letter-spacing: 1.5px;
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 60px; 
+}
+.sign-up-main-text, html {
+  font-family: Circular Std;
 }
 .footer {
   position: absolute;
@@ -20,14 +22,55 @@ body {
 }
 .navbar-default {
   background-color: transparent;
-  border-color: #fff;
+  border-color: transparent;
   text-align: center;
 }
 .logo h2 {
   float: left;
+  color: #4A90E2;
+  margin-top: 10px;
 }
 .signin h3 {
   float: right;
   padding-left: 20px;
 }
+h3 {
+  font-size: 14px;
+}
+.sign-up-row-spacing {
+  margin-top: 250px;
+}
+.sign-up-input-boxes {
+  display: block;
+  margin-bottom: 20px;
+  background-color:transparent;
+  border: 0px solid;
+  height:50px;
+  width:300px;
+  border-bottom: 2px solid #4A90E2;
+}
+.sign-up-input-boxes:focus {
+  outline:none;
+}
+.sign-up-input-boxes[type="text"] {
+    font-family: Circular Std;
+    letter-spacing: 1.5px;
+}
+::-webkit-input-placeholder, .sign-up-input-boxes[type="text"] {
+   color: #000;
+}
+.sign-up-button, input {
+ margin-left: 100px;
+}
+.sign-up-button {
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #4A90E2;
+  padding: 5px 15px;
+  color: #4A90E2;
+}
+.sign-up-main-text {
+  font-size: 48px;
+}
+
 
