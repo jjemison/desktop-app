@@ -105,6 +105,14 @@ ul, li {
 .add-new-website {
   margin-top: 20px;
 }
+.add-website-icon {
+  border: 2px solid #000;
+  background-color: transparent;
+  margin-right: 5px;
+}
+.add-website-icon h4 {
+  margin: 0;
+}
 
 
 
