@@ -7,16 +7,30 @@
   </div>
   <div class="row content-section-row">
     <div class="col-sm-4">
-        <h3 class="section-name">Section Name</h3>
-        <ul>
-          <li class="add-new-website"><button class="add-website-icon"><h4>+</h4></button> Add New Website</li>
+         <ul>
+          <h1 class="section-name" ng-repeat="contact in contacts">
+            <edit-in-place value="contact.name">{{name}}</edit-in-place>
+          </h2>
+       </ul>
+        <ul >
+          <li ng-click="toggle()" class="add-new-website"><button class="add-website-icon"><h4>+</h4></button ng-click="toggle()"> Add New Website
+          </li>
+          <form ng-show="myVar" ng-submit="newListItem()">
+            <input type="text" ng-model="name" placeholder="Name of Website"><br><br>
+            <input type="text" ng-model="url" placeholder="URL" ><br>
+            <button>Save</button>
+          </form>
+          <li ng-repeat="list in lists">
+            <a ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
+          </li>
         </ul>
     </div>
     <div class="col-sm-4 text-center">
         <button class="new-section-button">Create New Section<br><h2>+</h2></button>
     </div>
     <div class="col-sm-4">
-        
+
+
     </div>
   </div>
 
