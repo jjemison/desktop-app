@@ -7,6 +7,10 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px; 
 }
+ul, li {
+  list-style-type: none;
+  padding-left: 0;
+}
 .sign-up-main-text, .logo, .date, .login {
   font-family: Circular Std;
 }
@@ -40,7 +44,7 @@ body {
 .sign-up-row-spacing {
   margin-top: 250px;
 }
-.sign-up-input-boxes {
+.sign-up-input-boxes, .searchbar {
   display: block;
   margin-bottom: 20px;
   background-color:transparent;
@@ -49,10 +53,10 @@ body {
   width:300px;
   border-bottom: 2px solid #4A90E2;
 }
-.sign-up-input-boxes:focus {
+.sign-up-input-boxes:focus, .searchbar, .new-section-button {
   outline:none;
 }
-.sign-up-input-boxes[type="text"] {
+.sign-up-input-boxes[type="text"], .searchbar[type="text"], .new-section-button {
     font-family: Circular Std;
     letter-spacing: 1.5px;
 }
@@ -62,15 +66,46 @@ body {
 .sign-up-button, input {
  margin-left: 100px;
 }
-.sign-up-button {
+.sign-up-button, .new-section-button {
   border-radius: 10px;
   background: transparent;
   border: 2px solid #4A90E2;
   padding: 5px 20px;
   color: #4A90E2;
 }
+.sign-up-button {
+  padding: 5px 20px;
+}
 .sign-up-main-text {
   font-size: 48px;
 }
+.login-row {
+  margin-top: 100px;
+}
+.searchbar{
+  margin: auto;
+  border-bottom: 2px solid #000;
+  width:500px;
+}
+.searchbar, .section-name{
+  border-bottom: 2px solid #000;
+}
+.content-section-row {
+  margin-top: 50px;
+}
+.new-section-button {
+  margin-top: 40px;
+  padding: 80px 20px;
+}
+.section-name {
+  width: 250px;
+  height: 30px;
+  font-size: 16px;
+}
+.add-new-website {
+  margin-top: 20px;
+}
+
+
 
 
