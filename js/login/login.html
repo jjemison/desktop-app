@@ -6,6 +6,9 @@
     </div>
   </div>
   <div class="row content-section-row">
+   <div class="col-sm-4">
+        <button class="new-section-button">Create New Section<br><h2>+</h2></button>
+    </div>
     <div class="col-sm-4">
          <ul>
           <h1 class="section-name" ng-repeat="contact in contacts">
@@ -16,17 +19,14 @@
           <li ng-click="toggle()" class="add-new-website"><button class="add-website-icon"><h4>+</h4></button ng-click="toggle()"> Add New Website
           </li>
           <form ng-show="myVar" ng-submit="newListItem()">
-            <input type="text" ng-model="name" placeholder="Name of Website"><br><br>
-            <input type="text" ng-model="url" placeholder="URL" ><br>
-            <button>Save</button>
+            <input class="save-website" type="text" ng-model="name" placeholder="Name of Website"><br><br>
+            <input class="save-website" type="text" ng-model="url" placeholder="URL" ><br>
+            <button class="save-button">Save</button>
           </form>
           <li ng-repeat="list in lists">
-            <a ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
+            <button class="add-website-icon"><h4>-</h4></button ng-click="#"><a ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
           </li>
         </ul>
-    </div>
-    <div class="col-sm-4 text-center">
-        <button class="new-section-button">Create New Section<br><h2>+</h2></button>
     </div>
     <div class="col-sm-4">
 
