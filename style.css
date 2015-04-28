@@ -53,20 +53,20 @@ ul, li {
   width:300px;
   border-bottom: 2px solid #4A90E2;
 }
-.sign-up-input-boxes:focus, .searchbar, .new-section-button {
+.sign-up-input-boxes:focus, .searchbar, .new-section-button, .save-website {
   outline:none;
 }
-.sign-up-input-boxes[type="text"], .searchbar[type="text"], .new-section-button {
+.sign-up-input-boxes[type="text"], .searchbar[type="text"], .new-section-button, .save-website {
     font-family: Circular Std;
     letter-spacing: 1.5px;
 }
-::-webkit-input-placeholder, .sign-up-input-boxes[type="text"], .date, .login, .site-by {
+::-webkit-input-placeholder, .sign-up-input-boxes[type="text"], .date, .login, .site-by, .save-website {
    color: #000;
 }
 .sign-up-button, input {
  margin-left: 100px;
 }
-.sign-up-button, .new-section-button {
+.sign-up-button, .new-section-button, .save-button {
   border-radius: 10px;
   background: transparent;
   border: 2px solid #4A90E2;
@@ -86,8 +86,9 @@ ul, li {
   margin: auto;
   border-bottom: 2px solid #000;
   width:500px;
+  height:30px;
 }
-.searchbar, .section-name{
+.searchbar, .section-name {
   border-bottom: 2px solid #000;
 }
 .content-section-row {
@@ -113,6 +114,40 @@ ul, li {
 .add-website-icon h4 {
   margin: 0;
 }
+.edit-in-place span {
+  cursor: pointer;
+}
+
+.edit-in-place input {
+  display: none;
+}
+
+.edit-in-place.active span {
+  display: none;
+}
+
+.edit-in-place.active input {
+  display: inline-block;
+  margin-left: 0;
+}
+.save-website {
+  border: 0px solid;
+  margin-left: 35px;
+  margin-top: 15px;
+  border-bottom: 2px solid #4A90E2;
+  width:215px;
+}
+.save-button, .save-website {
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.ng-binding {
+  display: inline;
+}
+
+
+
+
 
 
 
