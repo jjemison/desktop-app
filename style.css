@@ -106,12 +106,12 @@ ul, li {
 .add-new-website {
   margin-top: 20px;
 }
-.add-website-icon {
+.add-website-icon, .edit-website-icon {
   border: 2px solid #000;
   background-color: transparent;
   margin-right: 5px;
 }
-.add-website-icon h4 {
+.add-website-icon h4, .edit-website-icon h4 {
   margin: 0;
 }
 .edit-in-place span {
@@ -144,7 +144,13 @@ ul, li {
 .ng-binding {
   display: inline;
 }
-
+.edit-website-icon {
+  margin-top: 20px;
+  padding: 3px 8px;
+}
+.edit-text {
+  margin: -20px 0px 0px 40px;
+}
 
 
 

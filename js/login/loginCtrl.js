@@ -18,7 +18,6 @@ $scope.contacts = [
       $scope.lists.push({name:$scope.name, url:$scope.url});
       $scope.name = '';
       $scope.url = '';
-
     };
 
 

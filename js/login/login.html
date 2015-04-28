@@ -19,12 +19,23 @@
           <li ng-click="toggle()" class="add-new-website"><button class="add-website-icon"><h4>+</h4></button ng-click="toggle()"> Add New Website
           </li>
           <form ng-show="myVar" ng-submit="newListItem()">
-            <input class="save-website" type="text" ng-model="name" placeholder="Name of Website"><br><br>
-            <input class="save-website" type="text" ng-model="url" placeholder="URL" ><br>
-            <button class="save-button">Save</button>
+            <input class="save-website" type="text" name="name" ng-model="name" placeholder="Name of Website" required >
+            <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid"></span><br>
+            <input class="save-website" type="text" ng-model="url" placeholder="URL" required><br>
+            <button ng-click="toggle()" class="save-button" type="submit" ng-required>Save</button>
           </form>
           <li ng-repeat="list in lists">
-            <button class="add-website-icon"><h4>-</h4></button ng-click="#"><a ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
+            <button class="edit-website-icon" ng-click= "editing = true">
+              <h4>-</h4>
+            </button>
+            <a ng-hide= "editing" ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
+             <form ng-show="editing" ng-submit="editing = false">
+              <h5 class="edit-text">Edit</h5>
+              <input class="save-website" type="text" ng-model="list.name" placeholder="Name of Website" ng-required/>
+              <input class="save-website" type="text" ng-model="list.url" placeholder="URL" ng-required/>
+              <br/>
+              <button class="save-button" type="submit">Save</button>
+            </form>
           </li>
         </ul>
     </div>
