@@ -151,7 +151,10 @@ ul, li {
 .edit-text {
   margin: -20px 0px 0px 40px;
 }
-
+.scroll {
+  height: 400px;
+  overflow: scroll;
+}
 
 
 

@@ -8,7 +8,7 @@ app.directive('editInPlace', function(){
     link: function ( $scope, element, attrs ) {
       // Let's get a reference to the input element, as we'll want to reference it.
       var inputElement = angular.element( element.children()[1] );
-      
+      // $scope.value = "This section"
       // This directive should have a set class so we can style it.
       element.addClass( 'edit-in-place' );
       
