@@ -12,8 +12,8 @@ app.config(function($routeProvider){
       controller: 'loginCtrl'//After this step automatically go and create the controller!!
     })
   .otherwise({
-        redirectTo: '/login'
-      });
+      redirectTo: '/login'
+    });
 
 
 });

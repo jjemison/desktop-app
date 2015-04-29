@@ -9,42 +9,41 @@
    <div class="col-sm-4">
         <button ng-click= "newSection()"class="new-section-button">Create New Section<br><h2>+</h2></button>
     </div>
-    <div class="col-sm-4 scroll" ng-repeat="section in sections track by $index" >
-         <ul>
-          <h1 class="section-name">
-            <edit-in-place value="default"></edit-in-place>
-          </h1>
-       </ul>
-        <ul >
-          <li ng-click="toggle[$index] = !toggle[$index]" class="add-new-website"><button class="add-website-icon"><h4>+</h4></button ng-click="toggle[$index] = !toggle[$index]"> Add New Website
-          </li>
-          <form ng-show="toggle[$index]" ng-submit="newListItem(section, name[$index], url[$index], $index)">
-            <input class="save-website" type="text" name="name" ng-model="name[$index]" placeholder="Name of Website" required >
-            <span ng-show="myForm.name.$dirty && myForm.name.$invalid"></span><br>
-            <input class="save-website" type="text" name="url" ng-model="url[$index]" placeholder="URL" required>
-            <span ng-show="myForm.url.$dirty && myForm.url.$invalid"></span>
-            <br>
-            <button ng-click="toggle[$index] = !toggle[$index]" class="save-button" type="submit" ng-required>Save</button>
+    <div class="col-sm-4 scroll" ng-repeat="section in sections track by $index">
+      <h1 class="section-name">
+        {{section.title}}
+      </h1>
+      <ul>
+        <li ng-click="toggle[$index] = !toggle[$index]" class="add-new-website">
+          <button class="add-website-icon"><h4>+</h4></button> Add New Website
+        </li>
+        <form ng-show="toggle[$index]" ng-submit="newListItem(section, siteName[$index], url[$index], $index)">
+          <input class="save-website" type="text" ng-model="siteName[$index]" placeholder="Name of Website" required ><br>
+          <input class="save-website" type="text" ng-model=" url[$index]" placeholder="URL" required>
+          <br>
+          <button ng-click="toggle[$index] = !toggle[$index]" class="save-button" type="submit" ng-required>Save</button>
+        </form>
+        <li ng-repeat="item in section.list">
+          <button class="edit-website-icon" ng-click= "editing = true" ng-click="toggle[$index]">
+            <h4>-</h4>
+          </button>
+          <a ng-hide= "editing" ng-href="{{item.url}}" target="_blank"><div>{{item.siteName}}</div></a>
+           <form ng-show="editing" ng-submit="editing = false">
+            <h5 class="edit-text">Edit</h5>
+            <input class="save-website" type="text" ng-model="item.siteName" placeholder="Website Name" ng-required/>
+            <input class="save-website" type="text" ng-model="item.url" placeholder="URL" ng-required/>
+            <br/>
+            <button class="save-button" type="submit">Save</button>
+            <button class="save-button" ng-click="remove()">Delete</button>
           </form>
-          <li ng-repeat="list in theSection[$index]">
-            <button class="edit-website-icon" ng-click= "editing = true">
-              <h4>-</h4>
-            </button>
-            <a ng-hide= "editing" ng-href="{{list.url}}" target="_blank"><div>{{list.name}}</div></a>
-             <form ng-show="editing" ng-submit="editing = false">
-              <h5 class="edit-text">Edit</h5>
-              <input class="save-website" type="text" ng-model="list.name" placeholder="Name of Website" ng-required/>
-              <input class="save-website" type="text" ng-model="list.url" placeholder="URL" ng-required/>
-              <br/>
-              <button class="save-button" type="submit">Save</button>
-            </form>
-          </li>
-        </ul>
+        </li>
+      </ul>
     </div>
-    <div class="col-sm-4">
 
-
-    </div>
+  <div class="col-sm-4">
+      <div>
+        Hello
+      </div>
   </div>
 
 

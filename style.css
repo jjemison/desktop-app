@@ -114,22 +114,6 @@ ul, li {
 .add-website-icon h4, .edit-website-icon h4 {
   margin: 0;
 }
-.edit-in-place span {
-  cursor: pointer;
-}
-
-.edit-in-place input {
-  display: none;
-}
-
-.edit-in-place.active span {
-  display: none;
-}
-
-.edit-in-place.active input {
-  display: inline-block;
-  margin-left: 0;
-}
 .save-website {
   border: 0px solid;
   margin-left: 35px;
